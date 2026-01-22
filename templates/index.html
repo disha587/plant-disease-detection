@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Disease Detection</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .container {
+            background: #ffffff;
+            width: 420px;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            position: relative;
+        }
+
+        h1 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .logout {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .upload-box {
+            border: 2px dashed #4CAF50;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background: #f9fff9;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #388E3C;
+        }
+
+        .tips {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+            text-align: left;
+        }
+
+        .tips li {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a class="logout" href="/logout">Logout</a>
+
+    <h1>🌿 Plant Disease Detection</h1>
+    <p class="subtitle">
+        Upload a leaf image and let AI identify the plant disease instantly.
+    </p>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+
+        <div class="upload-box">
+            <strong>📷 Upload Leaf Image</strong><br>
+            <small>(JPG / PNG format)</small><br><br>
+            <input type="file" name="file" required>
+        </div>
+
+        <button type="submit">🔍 Detect Disease</button>
+    </form>
+
+    <ul class="tips">
+        <li>✔ Use a clear leaf image</li>
+        <li>✔ Avoid blurry or dark photos</li>
+        <li>✔ One leaf per image gives best results</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

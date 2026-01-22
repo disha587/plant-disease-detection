@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Disease Detection - Login</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .login-box h1 {
+            margin-bottom: 10px;
+            color: #2e7d32;
+        }
+
+        .login-box p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #388E3C;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h1>🌱 Plant Disease Detection</h1>
+    <p>
+        Upload a leaf image and instantly identify plant diseases using
+        AI-powered deep learning.
+    </p>
+
+    <form method="post">
+        <input type="email" name="email" placeholder="Enter your Email ID" required>
+        <button type="submit">Login</button>
+    </form>
+
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <div class="footer-text">
+        No password required • Quick access for everyone
+    </div>
+</div>
+
+</body>
+</html>
